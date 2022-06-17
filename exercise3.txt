@@ -1,0 +1,141 @@
+1)
+$ mkdir project1
+$ mkdir project2
+
+
+2)
+$ cd project1
+$ git init
+$ git remote add origin https://github.com/anujmishra2000/test-project.git
+$ touch README.md
+$ git add -A
+$ git commit -m "First commit"
+
+3)
+$ git checkout -b staging
+
+4)
+$ touch test1.txt  
+//This is first commit
+$ git add -A
+$ git commit -m "created file1 and written message in it"
+
+5)
+$ git push origin staging
+
+6)
+$cd ..
+$cd project2
+
+7)
+$ git clone https://github.com/anujmishra2000/test-project.git
+
+
+8)
+$ cd test-project/
+
+9)
+//changed the text in file 'test1'
+
+10)
+$ git commit -am "changed file in project2"
+$ git push
+
+11)
+$ cd ..
+$ cd ..
+$ cd project1
+
+12)
+//already in staging
+
+13)
+//Changed the text in file 'test1' to 'This is third commit'.
+
+14)
+$ git commit -am "changed test1 to this is third commit"
+$ git push -u origin staging
+
+Error:
+as the test1 file of project 1 has "this is first commit" and repo has "this is second commit"
+So, we must pull first from repo then push 
+
+15)
+$ git checkout master
+
+16)
+$ git merge staging
+
+17)
+$ git branch testing
+$ git checkout testing
+
+18)
+//Changed the text to 'A is an alphabet'
+$ git commit -am "test1 file changed"
+
+19)
+//repeated as given
+
+20)
+$ git push -u origin testing
+
+21)
+$ git checkout master
+
+22)
+//Changed the text to '1 is a number'
+$ git commit -am "test1 file changed to 1"
+
+23)
+//repeated as given
+
+24)
+$ git push -u origin master
+
+25)
+$ git checkout testing
+$ git rebase master
+$ git add -A
+$ git rebase --continue
+//repeated last 2 steps 7 times and resolved the conflicts
+
+26)
+cd ..
+cd project2
+
+27)
+git fetch origin testing
+$ git branch -a
+$ git branch testing -t origin/testing
+
+
+28)
+$ git checkout master
+
+29)
+$ git merge testing
+//resolved conflict
+$ git add -A
+$ git commit -m "Merging"
+//merging finished
+
+30)Differece - Before merging master doesnt have file1 .
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
